@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="pro.css">
+<title>Projects | Anshul Patidar</title>
+</head>
+
+<body>
+
+<header>
+  <div class="logo"> </div>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+</header>
+
+
+
+<section class="projects-section">
+
+  <!-- ===== CURRENT PROJECTS ===== -->
+  <h2 class="section-title">Current Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- EPS PROJECT -->
+<!-- WEATHER ML PROJECT -->
+<div class="project-card" id="weatherCard">
+  <h3>Rain Prediction System</h3>
+  <p>
+    Machine Learning model predicting the probability of rainfall 
+    based on temperature, humidity, wind speed and atmospheric data.
+  </p>
+  <div class="tech-stack">
+    <span>Python</span>
+    <span>Pandas</span>
+    <span>Scikit-learn</span>
+    <span>Classification</span>
+  </div>
+  <button class="view-btn">View Details</button>
+</div>
+
+
+    <!-- SWIGGY PROJECT -->
+    <div class="project-card">
+      <h3>Swiggy Delivery Time Prediction</h3>
+      <p>
+        Regression-based ML model predicting real-time delivery duration
+        using historical order data.
+      </p>
+      <div class="tech-stack">
+        <span>Python</span>
+        <span>NumPy</span>
+        <span>Pandas</span>
+        <span>Regression</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== UPCOMING PROJECTS ===== -->
+  <h2 class="section-title upcoming-title">Upcoming Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card upcoming">
+      <h3>AI Chatbot System</h3>
+      <p>
+        NLP-powered chatbot designed to handle automated
+        school-related queries with intelligent response handling.
+      </p>
+      <div class="tech-stack">
+        <span>Python</span>
+        <span>NLP</span>
+        <span>ML</span>
+      </div>
+      <span class="badge">Coming Soon</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== MODAL ===== -->
+<!-- ===== MODAL ===== -->
+<div id="weatherModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Rain Prediction System</h2>
+
+    <p>
+      A Machine Learning classification model that predicts 
+      whether it will rain today based on historical weather data.
+    </p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Data Cleaning & Preprocessing</li>
+      <li>Feature Engineering (Humidity, Temp, Wind Speed)</li>
+      <li>Logistic Regression / Random Forest Model</li>
+      <li>Model Accuracy Evaluation</li>
+      <li>Real-time Prediction Output</li>
+    </ul>
+
+    <h3>ML Implementation</h3>
+    <p>
+      Supervised learning model trained on historical weather data 
+      to classify rainfall probability (Rain / No Rain). 
+      Optimized using accuracy and performance metrics.
+    </p>
+
+  </div>
+</div>
+
+
+
+  <div class="footer-bottom">
+    © 2026  • Built with passion for AI
+  </div>
+</footer>
+
+<script>
+const weatherCard = document.getElementById("weatherCard");
+const modal = document.getElementById("weatherModal");
+const closeBtn = document.querySelector(".close");
+
+weatherCard.onclick = function(){
+  modal.style.display = "flex";
+}
+
+closeBtn.onclick = function(){
+  modal.style.display = "none";
+}
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
